@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Store - VS Code Theme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="vscode-theme">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>Perfume<span class="accent">.store</span></span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-home"></i> Главная</a></li>
+                        <li><a href="#catalog"><i class="fas fa-list"></i> Каталог</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> О нас</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="btn-icon" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="btn-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-counter">3</span>
+                    </button>
+                    <button class="btn btn-primary btn-small">
+                        <i class="fas fa-user"></i> Войти
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="accent">Ароматы</span> для всех
+                    </h1>
+                    <p class="hero-subtitle">
+                        Коллекция элитных парфюмов, вдохновленных сокровенными воспоминаниями, хрупкостью времени и тишиной между нотами великой музыки
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-shopping-bag"></i> Перейти в каталог
+                        </button>
+                        <button class="btn btn-outline btn-large">
+                            <i class="fas fa-play-circle"></i> Смотреть видео
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="perfume-bottle">
+                        <div class="bottle-neck"></div>
+                        <div class="bottle-body">
+                            <div class="perfume-liquid" style="background: linear-gradient(45deg, #007acc, #c586c0);"></div>
+                        </div>
+                        <div class="bottle-base"></div>
+                    </div>
+                    <div class="code-bg">
+                        <pre><code>// Ваш идеальный аромат
+const perfume = {
+    name: "VS Code Noir",
+    notes: ["бергамот", "сандал", "амбра"],
+    intensity: "Eau de Parfum",
+    price: 89.99
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalog Section -->
+        <section class="catalog" id="catalog">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-tags"></i> Каталог <span class="accent">ароматов</span>
+                </h2>
+                <div class="filter-bar">
+                    <div class="filter-tags">
+                        <button class="filter-tag active">Все</button>
+                        <button class="filter-tag">Для мужчин</button>
+                        <button class="filter-tag">Для женщин</button>
+                        <button class="filter-tag">Унисекс</button>
+                        <button class="filter-tag">Новинки</button>
+                    </div>
+                    <div class="sort-select">
+                        <i class="fas fa-sort-amount-down"></i>
+                        <select>
+                            <option>По популярности</option>
+                            <option>По возрастанию цены</option>
+                            <option>По убыванию цены</option>
+                            <option>По названию</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-grid" id="productGrid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i> Почему выбирают <span class="accent">нас</span>
+                </h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Гарантия качества</h3>
+                        <p>Все парфюмы оригинальные, с полной гарантией от производителя</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Быстрая доставка</h3>
+                        <p>Отправка в день заказа. Доставка по всему миру за 3-7 дней</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Тематические ароматы</h3>
+                        <p>Уникальные парфюмы, созданные для тех, кто определяет себя сам</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Поддержка 24/7</h3>
+                        <p>Наша команда всегда готова ответить на ваши вопросы</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="logo">
+                            <i class="fas fa-code"></i>
+                            <span>Perfume<span class="accent">.store</span></span>
+                        </div>
+                        <p class="footer-text">
+                            Магазин элитных парфюмов. Ароматы, которые вдохновляют на большее.
+                        </p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Категории</h3>
+                        <ul>
+                            <li><a href="#">Мужские парфюмы</a></li>
+                            <li><a href="#">Женские парфюмы</a></li>
+                            <li><a href="#">Унисекс ароматы</a></li>
+                            <li><a href="#">Лимитированные серии</a></li>
+                            <li><a href="#">Наборы пробников</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Информация</h3>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Возврат и обмен</a></li>
+                            <li><a href="#">Конфиденциальность</a></li>
+                            <li><a href="#">Пользовательское соглашение</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Контакты</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-envelope"></i> ksenya@perfume.store</li>
+                            <li><i class="fas fa-phone"></i>+375 25 646-34-18</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Кодовая, 42</li>
+                        </ul>
+                        <div class="newsletter">
+                            <h4>Рассылка новинок</h4>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="Ваш email">
+                                <button class="btn btn-primary btn-small">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Perfume.store - Магазин парфюмов . Все права защищены.</p>
+                    <p>Сайт создан Костиковой Ксенией для проекта по информатике</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal for product details -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
